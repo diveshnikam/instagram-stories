@@ -18,9 +18,7 @@ const StoryViewer = ({ stories, startIndex, onClose }) => {
   };
 
   return (
-    <div className="position-fixed top-0 start-0 w-100 h-100 bg-dark d-flex justify-content-center align-items-center">
-
-    
+    <div className="position-fixed top-0 start-0 w-100 h-100 bg-white">
       <button
         className="btn btn-light position-absolute top-0 end-0 m-3 rounded-circle"
         style={{ zIndex: 5 }}
@@ -29,13 +27,23 @@ const StoryViewer = ({ stories, startIndex, onClose }) => {
         ✕
       </button>
 
-     
-      <div className="position-absolute start-0" style={{ top: "60px", bottom: 0, width: "50%" }} onClick={goPrev}></div>
+      <div
+        className="position-absolute start-0"
+        style={{ top: "60px", bottom: 0, width: "50%" }}
+        onClick={goPrev}
+      ></div>
 
-      
-      <div className="position-absolute end-0" style={{ top: "60px", bottom: 0, width: "50%" }} onClick={goNext}></div>
+      <div
+        className="position-absolute end-0"
+        style={{ top: "60px", bottom: 0, width: "50%" }}
+        onClick={goNext}
+      ></div>
 
-      <img src={stories[current].image} className="img-fluid" style={{ maxHeight: "100vh" }} />
+      <img
+        src={stories[current].image}
+        alt=""
+        className="w-100 h-100 object-fit-cover"
+      />
     </div>
   );
 };
